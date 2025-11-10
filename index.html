@@ -7,6 +7,7 @@
         
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="assets//css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     </head>
 
     <body class="font-poppins flex justify-center ">
@@ -16,73 +17,73 @@
         </header>
         
         <main class="w-full flex flex-col justify-center items-center ">  
-            <div class="bg-amber-700 font-bold text-amber-500  p-6 rounded-full w-4/6 flex justify-between m-7 text-2xl ">
-                <button class="icon duration-300 ease-in ">1</button>
-                <button class="icon duration-300 ease-in">2</button>
-                <button class="icon duration-300 ease-in">3</button>
-                <button class="icon duration-300 ease-in">4</button>
+            <div id="bar" class="bg-amber-700 font-bold text-amber-500  p-6 rounded-full w-4/6 flex justify-between m-7 text-2xl ">
+                <button class="icon duration-300 ease-in" id="1"><i class="fa-solid fa-user"></i></button>
+                <button class="icon duration-300 ease-in" id="2"><i class="fa-solid fa-briefcase"></i></button>
+                <button class="icon duration-300 ease-in" id="3"><i class="fa-solid fa-graduation-cap"></i></button>
+                <button class="icon duration-300 ease-in" id="4">4</button>
             </div>
-            <section class="flex justify-center  p-6 rounded-2xl  ">
-                <div class="text-amber-800 w-full card bg-base-100   shrink-0 shadow-2xl bg-amber-200 p-7 rounded-3xl" >
+            <section class="flex justify-center p-6 rounded-2xl w-full  ">
+                <div class="text-amber-800 w-6/6 card bg-base-100 w-[60%]  shrink-0 shadow-2xl bg-amber-200 p-7 rounded-3xl" >
                     
 
-                    <form id="step1Form" class="w-6/6 mx-auto flex flex-col items-center">
-                        <div  class=" stepper w-4/6 flex flex-col gap-2 font-bold ">
+                    <form id="step1Form" class="w-6/6 mx-auto flex flex-col p-4 items-center">
+                         <div class="stepper w-full flex flex-col gap-2 font-bold">
                             <h2 class="font-bold text-3xl text-center">Personal & Professional Information</h2>
                             <label>Full Name</label>
-                            <input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  type="text" id="fullName" required>
+                            <input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"  type="text" id="fullName" required>
 
                             <label for="email">Email</label>
-                            <input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  type="email" id="email"  required>
+                            <input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-400 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"  type="email" id="email"  required>
 
                             <label for="phone">Phone</label>
-                            <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  type="tel" id="phone"  required>
+                            <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-400 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"  type="tel" id="phone"  required>
 
                             <label for="address">Address</label>
-                            <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  type="text" id="address"  required>
+                            <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-400 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"  type="text" id="address"  required>
 
                             <label for="linkedin">LinkedIn</label>
-                            <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  type="url" id="linkedin"  required>
+                            <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-400 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"  type="url" id="linkedin"  required>
 
                             <label for="github">GitHub</label>
-                            <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  type="url" id="github"  required>
+                            <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-400 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"  type="url" id="github"  required>
                       
                         </div>
 
-                    <div  class="w-full stepper hidden flex-col gap-2 font-bold" >
+                 <div class="stepper w-full flex flex-col gap-2 font-bold">
                         <h2 class="font-bold text-3xl text-center ">Page two</h2>
                         <label>Desired Position</label>
-                        <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" type="text" id="position" required>
+                        <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500" type="text" id="position" required>
 
                         <label for="email">Level (Junior, Mid, Senior)</label>
-                        <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  type="text" id="level"  required>
+                        <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"  type="text" id="level"  required>
 
                         <label for="address">Programming Languages</label>
-                        <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  type="text" id="address"  required>
+                        <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"  type="text" id="languages"  required>
 
                         <label for="linkedin">Frameworks & Libraries</label>
-                        <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  type="url" id="linkedin"  required>
+                        <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"  type="url" id="frames"  required>
 
                         <label for="github">Tools & Platforms</label>
-                        <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  type="url" id="github"  required>
+                        <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"  type="url" id="tools"  required>
                         
                         <label for="jobTitle">Databases / Backend Knowledge</label>
-                        <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  type="text" id="jobTitle" placeholder="e.g., Frontend Developer" required>
+                        <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"  type="text" id="data" placeholder="e.g., Frontend Developer" required>
                     
                         <label for="phone">Soft Skills</label>
-                        <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"  type="tel" id="phone"  required>
+                        <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"  type="tel" id="skills"  required>
 
                      </div>
 
-                     <div class="stepper flex flex-col gap-2 font-bold">
+                     <div class="stepper w-full flex flex-col gap-2 font-bold">
                             <h2 class="font-bold text-3xl text-center">Languages, Hobbies & Education</h2>
 
                            
                             <label for="language">Language</label>
-                            <input id="language" type="text" placeholder="e.g., English" required class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <input id="language" type="text" placeholder="e.g., English" required class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500">
 
                             <label for="proficiency">Proficiency Level</label>
-                            <select id="proficiency" required class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <select id="proficiency" required class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500">
                                 <option value="">Select proficiency</option>
                                 <option>Beginner</option>
                                 <option>Intermediate</option>
@@ -92,22 +93,22 @@
                             </select>
 
                             <label for="hobby">Hobby / Interest</label>
-                            <input id="hobby" type="text" placeholder="e.g., Digital Art, Gaming, Singing" required class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <input id="hobby" type="text" placeholder="e.g., Digital Art, Gaming, Singing" required class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500">
 
                             <label for="hobbyDescription">Short Description</label>
-                            <textarea id="hobbyDescription" rows="2" placeholder="Briefly describe your hobby or what you enjoy about it..." class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
+                            <textarea id="hobbyDescription" rows="2" placeholder="Briefly describe your hobby or what you enjoy about it..." class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"></textarea>
 
                             <label for="school">School / University</label>
-                            <input id="school" type="text" placeholder="e.g., YouCode UM6P" required class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <input id="school" type="text" placeholder="e.g., YouCode UM6P" required class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500">
 
                             <label for="degree">Degree / Certificate</label>
-                            <input id="degree" type="text" placeholder="e.g., Web Development Program" required class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <input id="degree" type="text" placeholder="e.g., Web Development Program" required class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500">
 
                             <label for="field">Field of Study</label>
-                            <input id="field" type="text" placeholder="e.g., Full Stack Development" required class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <input id="field" type="text" placeholder="e.g., Full Stack Development" required class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500">
 
                             <label for="years">Years Attended</label>
-                            <input id="years" type="text" placeholder="e.g., 2025 – 2026" required class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <input id="years" type="text" placeholder="e.g., 2025 – 2026" required class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500">
                      </div>
 
 
@@ -115,11 +116,15 @@
                         <button id="previous-button" class="text-white bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-amber-300 dark:focus:ring-amber-800 shadow-lg shadow-amber-500/50 dark:shadow-lg dark:shadow-amber-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 w-2/4 self-center m-6" type="button" >previous</button>
                         <button id="next-button" class="text-white bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-amber-300 dark:focus:ring-amber-800 shadow-lg shadow-amber-500/50 dark:shadow-lg dark:shadow-amber-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 w-2/4 self-center m-6" type="button" >Next</button>
                         
-                     </div>
+                     </div>     
+                            <p class=" text-red-700" id="nameError"></p>
+                             <button id="submit" class="text-white bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-amber-300 dark:focus:ring-amber-800 shadow-lg shadow-amber-500/50 dark:shadow-lg dark:shadow-amber-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 w-2/4 self-center m-6" type="button" >submit</button>
+
                     </form>
                     <!-- ////////////// -->
                      
                 </div>
+
             </section>
 
 

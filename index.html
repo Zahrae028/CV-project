@@ -1,137 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="assets//css/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    </head>
 
-    <body class="font-poppins flex justify-center ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-        <header>
-            
-        </header>
-        
-        <main class="w-full flex flex-col justify-center items-center ">  
-            <div id="bar" class="bg-amber-700 font-bold text-amber-500  p-6 rounded-full w-4/6 flex justify-between m-7 text-2xl ">
-                <button class="icon duration-300 ease-in" id="1"><i class="fa-solid fa-user"></i></button>
-                <button class="icon duration-300 ease-in" id="2"><i class="fa-solid fa-briefcase"></i></button>
-                <button class="icon duration-300 ease-in" id="3"><i class="fa-solid fa-graduation-cap"></i></button>
-                <button class="icon duration-300 ease-in" id="4">4</button>
-            </div>
-            <section class="flex justify-center p-6 rounded-2xl w-full  ">
-                <div class="text-amber-800 w-6/6 card bg-base-100 w-[60%]  shrink-0 shadow-2xl bg-amber-200 p-7 rounded-3xl" >
-                    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets//css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script> -->
+</head>
 
-                    <form id="step1Form" class="w-6/6 mx-auto flex flex-col p-4 items-center">
-                         <div class="stepper w-full flex flex-col gap-2 font-bold">
-                            <h2 class="font-bold text-3xl text-center">Personal & Professional Information</h2>
-                            <label>Full Name</label>
-                            <input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"  type="text" id="fullName" required>
+<body class="font-poppins">
 
-                            <label for="email">Email</label>
-                            <input class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-400 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"  type="email" id="email"  required>
+    <header class="w-full flex justify-between p-4 px-8 font-semibold bg-amber-700 text-amber-300">
+        <span>CVMaker</span>
+        <div class=" flex gap-4">
+            <a href="">create a cv</a>
+            <a href="">log in</a>
+        </div>
+    </header>
 
-                            <label for="phone">Phone</label>
-                            <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-400 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"  type="tel" id="phone"  required>
+    <main class="duration-300 ease-in w-full flex flex-col justify-center items-center ">
+        <div id="bar"
+            class="bg-amber-700 font-bold text-amber-500  p-4 rounded-full w-4/6 flex justify-between m-7 text-2xl duration-700 ease-in-out  ">
+            <button class="icon duration-300 ease-in" id="1"><i
+                    class="fa-solid fa-user duration-300 ease-in"></i></button>
+            <button class="icon duration-300 ease-in" id="2"><i
+                    class="fa-solid fa-briefcase duration-300 ease-in"></i></button>
+            <button class="icon duration-300 ease-in" id="3"><i
+                    class="fa-solid fa-graduation-cap duration-300 ease-in"></i></button>
+            <button class="icon duration-300 ease-in" id="4">4</button>
+        </div>
+        <section class="flex justify-center p-6 rounded-2xl w-full  ">
+            <div class="text-amber-800 w-6/6 card bg-base-100 w-[60%] shrink-0 shadow-2xl bg-amber-200 p-7 rounded-3xl">
 
-                            <label for="address">Address</label>
-                            <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-400 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"  type="text" id="address"  required>
 
-                            <label for="linkedin">LinkedIn</label>
-                            <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-400 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"  type="url" id="linkedin"  required>
+                <form id="step1Form" class="w-6/6 mx-auto flex flex-col p-4 items-center">
+                    <div class="stepper w-full flex flex-col gap-2 font-bold">
+                        <h2 class="font-bold text-3xl text-center">Personal & Professional Information</h2>
+                        <label>Full Name</label>
+                        <input
+                            class="bg-gray-50 border h-8 border-amber-300 text-gray-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"
+                            type="text" id="fullName" required>
 
-                            <label for="github">GitHub</label>
-                            <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-400 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"  type="url" id="github"  required>
-                      
+                        <label for="email">Email</label>
+                        <input
+                            class="bg-gray-50 border h-8 border-amber-300 text-gray-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-400 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"
+                            type="email" id="email" required>
+
+                        <label for="phone">Phone</label>
+                        <input
+                            class="bg-amber-50 border h-8 border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-400 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"
+                            type="tel" id="phone" required>
+
+                        <label for="address">Address</label>
+                        <input
+                            class="bg-amber-50 border h-8 border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-400 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"
+                            type="text" id="address" required>
+
+                        <label for="linkedin">LinkedIn</label>
+                        <input
+                            class="bg-amber-50 border h-8 border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-400 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500" type="url" id="linkedin" required>
+
+                        <label for="github">GitHub</label>
+                        <input
+                            class="bg-amber-50 border h-8 border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-400 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"
+                            type="url" id="github" required>
+
+                        <div class="max-w-md mx-auto rounded-lg overflow-hidden md:max-w-xl">
+                            <div class="md:flex">
+                                <div class="w-full p-3">
+                                    <div
+                                        class="relative h-48 rounded-lg border-2 border-amber-500 bg-gray-50 flex justify-center items-center shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                                        <div class="absolute flex flex-col items-center">
+                                            <img alt="File Icon" class="mb-3"
+                                                src="https://img.icons8.com/dusk/64/000000/file.png" />
+                                            <span class="block text-amber-500 font-semibold">Drag &amp; drop your files
+                                                here</span>
+                                            <span class="block text-amber-400 font-normal mt-1">or click to
+                                                upload</span>
+                                        </div>
+
+                                        <input name="" class="h-full w-full opacity-0 cursor-pointer" type="file"
+                                            id="pic" />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                 <div class="stepper w-full flex flex-col gap-2 font-bold">
-                        <h2 class="font-bold text-3xl text-center ">Page two</h2>
-                        <label>Desired Position</label>
-                        <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500" type="text" id="position" required>
+                    </div>
 
-                        <label for="email">Level (Junior, Mid, Senior)</label>
-                        <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"  type="text" id="level"  required>
+                    <div class="stepper w-full flex flex-col gap-2 font-bold ">
+                        <h2 class="font-bold text-3xl text-center ">Skills</h2>
+
+                        <!-- <label>Desired Position</label> -->
+                        <!-- <input class="bg-amber-50 border h-8 border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500" type="text" id="position" required> -->
+
+                        <!-- <label for="email">Level (Junior, Mid, Senior)</label>
+                        <input class="bg-amber-50 border h-8 border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"  type="text" id="level"  required> -->
 
                         <label for="address">Programming Languages</label>
-                        <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"  type="text" id="languages"  required>
+                        <input
+                            class="bg-amber-50 border h-8 border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"
+                            type="text" id="prog-lang" required>
 
                         <label for="linkedin">Frameworks & Libraries</label>
-                        <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"  type="url" id="frames"  required>
+                        <input
+                            class="bg-amber-50 border h-8 border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"
+                            type="url" id="frames" required>
 
                         <label for="github">Tools & Platforms</label>
-                        <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"  type="url" id="tools"  required>
-                        
+                        <input
+                            class="bg-amber-50 border h-8 border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"
+                            type="url" id="tools" required>
+
                         <label for="jobTitle">Databases / Backend Knowledge</label>
-                        <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"  type="text" id="data" placeholder="e.g., Frontend Developer" required>
-                    
+                        <input
+                            class="bg-amber-50 border h-8 border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"
+                            type="text" id="data" placeholder="e.g., Frontend Developer" required>
+
                         <label for="phone">Soft Skills</label>
-                        <input class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"  type="tel" id="skills"  required>
+                        <input
+                            class="bg-amber-50 border h-8 border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"
+                            placeholder="write a paragraph about your soft skills"
+                            type="tel" id="skills" required>
 
-                     </div>
+                    </div>
 
-                     <div class="stepper w-full flex flex-col gap-2 font-bold">
-                            <h2 class="font-bold text-3xl text-center">Languages, Hobbies & Education</h2>
+                    <div class="stepper w-full flex flex-col gap-2 font-bold">
+                        <h2 class="font-bold text-3xl text-center">Languages, Hobbies & Education</h2>
 
-                           
-                            <label for="language">Language</label>
-                            <input id="language" type="text" placeholder="e.g., English" required class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500">
 
-                            <label for="proficiency">Proficiency Level</label>
-                            <select id="proficiency" required class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500">
-                                <option value="">Select proficiency</option>
-                                <option>Beginner</option>
-                                <option>Intermediate</option>
-                                <option>Advanced</option>
-                                <option>Fluent</option>
-                                <option>Native</option>
-                            </select>
+                        <label for="language">Language</label>
+                        <input id="language" type="text" placeholder="e.g., English" required
+                            class="bg-amber-50 border h-8 border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500">
 
-                            <label for="hobby">Hobby / Interest</label>
-                            <input id="hobby" type="text" placeholder="e.g., Digital Art, Gaming, Singing" required class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500">
+                        <label for="proficiency">Proficiency Level</label>
+                        <select id="proficiency" required
+                            class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500">
+                            <option value="">Select proficiency</option>
+                            <option>Beginner</option>
+                            <option>Intermediate</option>
+                            <option>Advanced</option>
+                            <option>Fluent</option>
+                            <option>Native</option>
+                        </select>
 
-                            <label for="hobbyDescription">Short Description</label>
-                            <textarea id="hobbyDescription" rows="2" placeholder="Briefly describe your hobby or what you enjoy about it..." class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"></textarea>
+                        <label for="hobbyDescription">Short Description</label>
+                        <textarea id="hobbyDescription" rows="2"
+                            placeholder="Briefly describe your hobby or what you enjoy about it..."
+                            class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"></textarea>
 
-                            <label for="school">School / University</label>
-                            <input id="school" type="text" placeholder="e.g., YouCode UM6P" required class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500">
+                        <label for="school">School / University</label>
+                        <input id="school" type="text" placeholder="e.g., YouCode UM6P" required
+                            class="bg-amber-50 border h-8 border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500">
+
+                        <label for="field">Field of Study</label>
+                        <input id="field" type="text" placeholder="e.g., Full Stack Development" required
+                            class="bg-amber-50 border h-8 border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500">
+
+                        <div id="add-info" class="hidden flex-col gap-2">
+                            <label for="years">Years Attended</label>
+                            <input id="years" type="text" placeholder="e.g., 2025 – 2026" required
+                                class="bg-amber-50 border h-8 border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500">
 
                             <label for="degree">Degree / Certificate</label>
-                            <input id="degree" type="text" placeholder="e.g., Web Development Program" required class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500">
+                            <input id="degree" type="text" placeholder="e.g., Web Development Program" required
+                                class="bg-amber-50 border h-8 border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500">
 
-                            <label for="field">Field of Study</label>
-                            <input id="field" type="text" placeholder="e.g., Full Stack Development" required class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500">
+                            <label for="hobby">Hobby / Interest</label>
+                            <input id="hobby" type="text" placeholder="e.g., Digital Art, Gaming, Singing" required
+                                class="bg-amber-50 border h-8 border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500">
+                        </div>
+                        <button id="add-button"
+                            class="w-48 text-white bg-amber-500 hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-amber-300 dark:focus:ring-amber-800 shadow-lg shadow-amber-500/50 dark:shadow-lg  font-bold rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 self-center m-6"
+                            type="button">additional infos</button>
+                        <button id="remove-button"
+                            class="hidden w-48 text-white bg-amber-500 hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-amber-300 dark:focus:ring-amber-800 shadow-lg shadow-amber-500/50 dark:shadow-lg  font-bold rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 self-center m-6"
+                            type="button"> Remove additional infos</button>
+                    </div>
 
-                            <label for="years">Years Attended</label>
-                            <input id="years" type="text" placeholder="e.g., 2025 – 2026" required class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500">
-                     </div>
-
-
-                     <div class="flex justify-between w-full">
-                        <button id="previous-button" class="text-white bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-amber-300 dark:focus:ring-amber-800 shadow-lg shadow-amber-500/50 dark:shadow-lg dark:shadow-amber-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 w-2/4 self-center m-6" type="button" >previous</button>
-                        <button id="next-button" class="text-white bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-amber-300 dark:focus:ring-amber-800 shadow-lg shadow-amber-500/50 dark:shadow-lg dark:shadow-amber-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 w-2/4 self-center m-6" type="button" >Next</button>
-                        
-                     </div>     
-                            <p class=" text-red-700" id="nameError"></p>
-                             <button id="submit" class="text-white bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-amber-300 dark:focus:ring-amber-800 shadow-lg shadow-amber-500/50 dark:shadow-lg dark:shadow-amber-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 w-2/4 self-center m-6" type="button" >submit</button>
-
-                    </form>
-                    <!-- ////////////// -->
-                     
-                </div>
-
-            </section>
-
-
-        </main>
+                    <div class="stepper w-full flex flex-col gap-2 font-bold">
 
 
 
+                        <div class="w-full mx-auto bg-white rounded-xl p-8 text-gray-900" id="CV">
+
+                            <div class="text-center mb-6">
+                                <div class="w-32 h-32 mb-4">
+                                    <img id="cv-pic" src="" alt="Profile Picture"
+                                        class="w-full h-full object-cover rounded-full border-2 border-amber-500 self-center">
+                                </div>
+                                <h1 class="text-4xl font-bold" id="cv-name">Full Name</h1>
+                                <p class="text-gray-600" id="cv-email">email@example.com</p>
+                                <p class="text-gray-600" id="cv-phone">+212 6XXXXXXXX</p>
+                                <p class="text-gray-600" id="cv-address">Address</p>
+                            </div>
+
+
+                            <div class="flex justify-center gap-4 mb-6">
+                                <a href="" id="cv-linkedin" class="text-amber-600 hover:underline">LinkedIn</a>
+                                <a href="#" id="cv-github" class="text-amber-600 hover:underline">GitHub</a>
+                            </div>
+
+
+                            <div class="mb-6">
+                                <h2 class="text-2xl font-semibold border-b-2 border-amber-300 mb-2">Skills</h2>
+                                <ul class="list-disc list-inside" id="cv-skills">
+
+                                </ul>
+                            </div>
+
+
+                            <div class="mb-6">
+                                <h2 class="text-2xl font-semibold border-b-2 border-amber-300 mb-2">Technical Skills
+                                </h2>
+                                <p><strong>Programming Languages:</strong><span id="cv-prog-lang"></span> </p>
+                                <p id="cv-frames"><strong>Frameworks & Libraries:</strong> </p>
+                                <p id="cv-tools"><strong>Tools & Platforms:</strong> </p>
+                                <p id="cv-database"><strong>Databases / Backend:</strong> </p>
+                            </div>
+
+                            <div class="mb-6">
+                                <h2 class="text-2xl font-semibold border-b-2 border-amber-300 mb-2">Languages, Education
+                                    & Hobbies</h2>
+                                <p id="cv-language"><strong>Language:</strong> </p>
+                                <p id="cv-proficiency"><strong>Proficiency:</strong> </p>
+                                <p id="cv-school"><strong>School/University:</strong> </p>
+                                <p id="cv-field"><strong>Field of Study:</strong> </p>
+                                <p id="cv-years"><strong>Years Attended:</strong> </p>
+                                <p id="cv-degree"><strong>Degree:</strong> </p>
+                                <p id="cv-hobby"><strong>Hobbies/Interests:</strong> </p>
+                            </div>
+                        </div>
+                        <button id="save-button"
+                            class="w-48 text-white bg-amber-500 hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-amber-300 dark:focus:ring-amber-800 shadow-lg shadow-amber-500/50 dark:shadow-lg  font-bold rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 self-center m-6"
+                            type="button">Save CV</button>
+                    </div>
+
+                    <div class="justify-center flex gap-5 w-full">
+                        <button id="previous-button"
+                            class="w-48 text-white bg-amber-500 hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-amber-300 dark:focus:ring-amber-800 shadow-lg shadow-amber-500/50 dark:shadow-lg  font-bold rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 self-center m-6"
+                            type="button">previous</button>
+                        <button id="next-button"
+                            class="w-48 text-white bg-amber-500 hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-amber-300 dark:focus:ring-amber-800 shadow-lg shadow-amber-500/50 dark:shadow-lg  font-bold rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 self-center m-6"
+                            type="button">Next</button>
+
+                    </div>
+                    <p class=" text-red-700" id="nameError"></p>
+                    <button id="submit"
+                        class="w-48 text-white bg-amber-500 hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-amber-300 dark:focus:ring-amber-800 shadow-lg shadow-amber-500/50 dark:shadow-lg  font-bold rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 self-center m-6"
+                        type="button">submit</button>
+
+
+
+
+                </form>
+
+            </div>
+
+
+        </section>
+
+
+
+    </main>
 
 
 
@@ -144,6 +279,11 @@
 
 
 
-    </body>
-    <script src="./assets/js/script.js"></script>
+
+
+
+</body>
+<script src="./assets/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
 </html>

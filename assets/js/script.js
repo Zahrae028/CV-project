@@ -83,14 +83,6 @@ const cvHobby2 = document.getElementById('cv-hobby-name2');
 
 let userData = {};
 
-// let array = ['eve', 'adam', 'lilith']
-
-// for (let i = 0; i < array.length; i++) {
-
-//     const p = document.createElement('p')
-//     p.textContent = array[i]
-//     bar.appendChild(p)
-// }
 
 
 
@@ -99,7 +91,7 @@ picInput.addEventListener('change', () => {
     console.log("FILE CHANGED");
 });
 
-let page = 3;
+let page = 0;
 console.log(icons);
 
 for (let icon of icons) {

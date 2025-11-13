@@ -4,7 +4,8 @@ const form = document.querySelectorAll(".stepper")
 const icons = document.querySelectorAll(".icon")
 const bar = document.getElementById('bar')
 const submit = document.getElementById('submit')
-const save = document.getElementById('save-button')
+const save1 = document.getElementById('save-button1')
+const save2 = document.getElementById('save-button2')
 
 const email = document.getElementById('email')
 const fullName = document.getElementById('fullName')
@@ -56,6 +57,27 @@ const cvField = document.getElementById('cv-field-of-study')
 const cvYears = document.getElementById('cv-years-attended')
 const cvDegree = document.getElementById('cv-degree-name')
 const cvHobby = document.getElementById('cv-hobby-name')
+const pfp2 = document.getElementById('cv-pic2')
+
+const cvName2 = document.getElementById('cv-name2');
+const cvEmail2 = document.getElementById('cv-email2');
+const cvPhone2 = document.getElementById('cv-phone2');
+const cvAddress2 = document.getElementById('cv-address2');
+const cvSkills2 = document.getElementById('cv-skills2');
+const cvProgLangs2 = document.getElementById('cv-prog-lang2');
+const cvFrames2 = document.getElementById('cv-frames2');
+const cvTools2 = document.getElementById('cv-tools2');
+const cvData2 = document.getElementById('cv-database2');
+const cvLinkedin2 = document.getElementById('cv-linkedin2');
+const cvGithub2 = document.getElementById('cv-github2');
+const cvLangs2 = document.getElementById('cv-language2');
+const cvProfic2 = document.getElementById('cv-proficiency-level2');
+const cvSchool2 = document.getElementById('cv-school-name2');
+const cvField2 = document.getElementById('cv-field-of-study2');
+const cvYears2 = document.getElementById('cv-years-attended2');
+const cvDegree2 = document.getElementById('cv-degree-name2');
+const cvHobby2 = document.getElementById('cv-hobby-name2');
+
 
 
 
@@ -74,7 +96,7 @@ let userData = {};
 
 
 picInput.addEventListener('change', () => {
-  console.log("FILE CHANGED");
+    console.log("FILE CHANGED");
 });
 
 let page = 3;
@@ -198,6 +220,11 @@ submit.addEventListener("click", (e) => {
     cvEmail.textContent = userData.personalData.email
     cvPhone.textContent = userData.personalData.phone
     cvAddress.textContent = userData.personalData.address
+    cvName2.textContent = userData.personalData.name;
+    cvEmail2.textContent = userData.personalData.email;
+    cvPhone2.textContent = userData.personalData.phone;
+    cvAddress2.textContent = userData.personalData.address;
+
 
     cvSkills.textContent = userData.skills
     cvProgLangs.textContent = userData.progLang
@@ -212,21 +239,40 @@ submit.addEventListener("click", (e) => {
     cvDegree.textContent = userData.degree
     cvHobby.textContent = userData.hobby
 
+    cvSkills2.textContent = userData.skills;
+    cvProgLangs2.textContent = userData.progLang;
+    cvFrames2.textContent = userData.frames;
+    cvTools2.textContent = userData.tools;
+    cvData2.textContent = userData.data;
+    cvLangs2.textContent = userData.language;
+    cvProfic2.textContent = userData.proficiency;
+    cvSchool2.textContent = userData.school;
+    cvField2.textContent = userData.field;
+    cvYears2.textContent = userData.years;
+    cvDegree2.textContent = userData.degree;
+    cvHobby2.textContent = userData.hobby;
+
+
     cvLinkedin.setAttribute('href', `${linked.value}`)
     cvGithub.setAttribute('href', `${github.value}`)
 
+    cvLinkedin2.setAttribute('href', `${linked.value}`);
+cvGithub2.setAttribute('href', `${github.value}`);
 
 
- 
+
+
 })
- picInput.addEventListener('change', () => {
+picInput.addEventListener('change', () => {
 
     if (picInput.files[0]) {
-    pfp.src = URL.createObjectURL(picInput.files[0]);
-    showPic.src = URL.createObjectURL(picInput.files[0]);  
+        pfp.src = URL.createObjectURL(picInput.files[0]);
+        pfp2.src = URL.createObjectURL(picInput.files[0]);
+        showPic.src = URL.createObjectURL(picInput.files[0]);
     }
-    
- })
+
+})
+
 
 
 
@@ -256,18 +302,32 @@ remove.addEventListener('click', (e) => {
     add.style.display = 'block'
     remove.style.display = 'none'
 })
-save.addEventListener('click', (e) => {
+
+
+save1.addEventListener('click', (e) => {
     const cv = document.getElementById('CV')
     var opt = {
         margin: 0,
         filename: 'myCV.pdf',
         image: { type: 'jpeg' },
-        // html2canvas: { scale: 2 },
+
         jsPDF: { unit: 'mm', format: 'letter', orientation: 'portrait' }
     };
 
-    // New Promise-based usage:
-    html2pdf().set(opt).from(cv).save();
+ 
+    html2pdf().set(opt).from(cv1).save();
+})
+save2.addEventListener('click', (e) => {
+    const cv1 = document.getElementById('CV1')
+    const cv2 = document.getElementById('CV2')
+    var opt = {
+        margin: 0,
+        filename: 'myCV.pdf',
+        image: { type: 'jpeg' },
+        jsPDF: { unit: 'mm', format: 'letter', orientation: 'portrait' }
+    };
+
+    html2pdf().set(opt).from(cv2).save();
 })
 
 

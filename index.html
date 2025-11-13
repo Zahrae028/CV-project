@@ -21,6 +21,13 @@
             <a href="">log in</a>
         </div>
     </header>
+    <svg class="fixed top-0 left-0 w-full -z-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path fill="#b45309" fill-opacity="1"
+            d="M0,224L26.7,197.3C53.3,171,107,117,160,112C213.3,107,267,149,320,165.3C373.3,181,427,171,480,192C533.3,213,587,267,640,272C693.3,277,747,235,800,213.3C853.3,192,907,192,960,186.7C1013.3,181,1067,171,1120,192C1173.3,213,1227,267,1280,272C1333.3,277,1387,235,1413,213.3L1440,192L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z">
+        </path>
+    </svg>
+
+
 
     <main class="duration-300 ease-in w-full flex flex-col justify-center items-center ">
         <div id="bar"
@@ -62,7 +69,8 @@
 
                         <label for="linkedin">LinkedIn</label>
                         <input
-                            class="bg-amber-50 border h-8 border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-400 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500" type="url" id="linkedin" required>
+                            class="bg-amber-50 border h-8 border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-400 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"
+                            type="url" id="linkedin" required>
 
                         <label for="github">GitHub</label>
                         <input
@@ -75,7 +83,7 @@
                                     <div
                                         class="relative h-48 rounded-lg border-2 border-amber-500 bg-gray-50 flex justify-center items-center shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out">
                                         <div class="absolute flex flex-col items-center">
-                                            <img alt="File Icon" class="mb-3"
+                                            <img alt="File Icon" class="mb-3 rounded-full max-w-28" id="show-pic"
                                                 src="https://img.icons8.com/dusk/64/000000/file.png" />
                                             <span class="block text-amber-500 font-semibold">Drag &amp; drop your files
                                                 here</span>
@@ -84,7 +92,7 @@
                                         </div>
 
                                         <input name="" class="h-full w-full opacity-0 cursor-pointer" type="file"
-                                            id="pic" />
+                                            id="pic-input" />
                                     </div>
                                 </div>
                             </div>
@@ -124,8 +132,7 @@
                         <label for="phone">Soft Skills</label>
                         <input
                             class="bg-amber-50 border h-8 border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"
-                            placeholder="write a paragraph about your soft skills"
-                            type="tel" id="skills" required>
+                            placeholder="write a paragraph about your soft skills" type="tel" id="skills" required>
 
                     </div>
 
@@ -134,7 +141,7 @@
 
 
                         <label for="language">Language</label>
-                        <input id="language" type="text" placeholder="e.g., English" required
+                        <input id="language" type="text" placeholder="e.g., English, Spanish, French" required
                             class="bg-amber-50 border h-8 border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500">
 
                         <label for="proficiency">Proficiency Level</label>
@@ -148,31 +155,28 @@
                             <option>Native</option>
                         </select>
 
-                        <label for="hobbyDescription">Short Description</label>
-                        <textarea id="hobbyDescription" rows="2"
-                            placeholder="Briefly describe your hobby or what you enjoy about it..."
-                            class="bg-amber-50 border border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500"></textarea>
-
+                       
                         <label for="school">School / University</label>
-                        <input id="school" type="text" placeholder="e.g., YouCode UM6P" required
+                        <input id="school" type="text" placeholder="e.g., Harvard University, YouCode UM6P" required
                             class="bg-amber-50 border h-8 border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500">
 
                         <label for="field">Field of Study</label>
-                        <input id="field" type="text" placeholder="e.g., Full Stack Development" required
+                        <input id="field" type="text" placeholder="e.g., Computer Science, Marketing" required
                             class="bg-amber-50 border h-8 border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500">
 
                         <div id="add-info" class="hidden flex-col gap-2">
                             <label for="years">Years Attended</label>
-                            <input id="years" type="text" placeholder="e.g., 2025 – 2026" required
+                            <input id="years" type="text" placeholder="e.g., 2020 – 2024" required
                                 class="bg-amber-50 border h-8 border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500">
 
                             <label for="degree">Degree / Certificate</label>
-                            <input id="degree" type="text" placeholder="e.g., Web Development Program" required
+                            <input id="degree" type="text" placeholder="e.g., Bachelor’s in Computer Science" required
                                 class="bg-amber-50 border h-8 border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500">
 
                             <label for="hobby">Hobby / Interest</label>
-                            <input id="hobby" type="text" placeholder="e.g., Digital Art, Gaming, Singing" required
+                            <input id="hobby" type="text" placeholder="e.g., Painting, Gaming, Music" required
                                 class="bg-amber-50 border h-8 border-amber-300 text-amber-900 text-sm rounded-lg focus:ring-amber-500 focus:border-amber-500 block w-full p-2.5 dark:bg-amber-800 dark:border-amber-600 dark:placeholder-amber-600 dark:text-white dark:focus:ring-amber-500 dark:focus:border-amber-500">
+
                         </div>
                         <button id="add-button"
                             class="w-48 text-white bg-amber-500 hover:bg-amber-400 focus:ring-4 focus:outline-none focus:ring-amber-300 dark:focus:ring-amber-800 shadow-lg shadow-amber-500/50 dark:shadow-lg  font-bold rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 self-center m-6"
@@ -188,9 +192,9 @@
 
                         <div class="w-full mx-auto bg-white rounded-xl p-8 text-gray-900" id="CV">
 
-                            <div class="text-center mb-6">
+                            <div class="text-center mb-6 flex flex-col items-center">
                                 <div class="w-32 h-32 mb-4">
-                                    <img id="cv-pic" src="" alt="Profile Picture"
+                                    <img id="cv-pic" src="" 
                                         class="w-full h-full object-cover rounded-full border-2 border-amber-500 self-center">
                                 </div>
                                 <h1 class="text-4xl font-bold" id="cv-name">Full Name</h1>
@@ -202,37 +206,40 @@
 
                             <div class="flex justify-center gap-4 mb-6">
                                 <a href="" id="cv-linkedin" class="text-amber-600 hover:underline">LinkedIn</a>
-                                <a href="#" id="cv-github" class="text-amber-600 hover:underline">GitHub</a>
+                                <a href="" id="cv-github" class="text-amber-600 hover:underline">GitHub</a>
                             </div>
 
 
                             <div class="mb-6">
                                 <h2 class="text-2xl font-semibold border-b-2 border-amber-300 mb-2">Skills</h2>
-                                <ul class="list-disc list-inside" id="cv-skills">
-
-                                </ul>
+                                <p class="w-8/10" id="cv-skills"></p>
                             </div>
 
 
                             <div class="mb-6">
                                 <h2 class="text-2xl font-semibold border-b-2 border-amber-300 mb-2">Technical Skills
                                 </h2>
-                                <p><strong>Programming Languages:</strong><span id="cv-prog-lang"></span> </p>
-                                <p id="cv-frames"><strong>Frameworks & Libraries:</strong> </p>
-                                <p id="cv-tools"><strong>Tools & Platforms:</strong> </p>
-                                <p id="cv-database"><strong>Databases / Backend:</strong> </p>
+                                <p><strong>Programming Languages:</strong> <span id="cv-prog-lang"></span> </p>
+                                <p><strong>Frameworks & Libraries:</strong> <span id="cv-frames"></span> </p>
+                                <p><strong>Tools & Platforms:</strong> <span id="cv-tools"></span></p>
+                                <p><strong>Databases / Backend:</strong> <span id="cv-database"></span> </p>
                             </div>
 
                             <div class="mb-6">
                                 <h2 class="text-2xl font-semibold border-b-2 border-amber-300 mb-2">Languages, Education
                                     & Hobbies</h2>
-                                <p id="cv-language"><strong>Language:</strong> </p>
-                                <p id="cv-proficiency"><strong>Proficiency:</strong> </p>
-                                <p id="cv-school"><strong>School/University:</strong> </p>
-                                <p id="cv-field"><strong>Field of Study:</strong> </p>
-                                <p id="cv-years"><strong>Years Attended:</strong> </p>
-                                <p id="cv-degree"><strong>Degree:</strong> </p>
-                                <p id="cv-hobby"><strong>Hobbies/Interests:</strong> </p>
+                                <p><strong>Language:</strong> <span id="cv-language"></span></p>
+                                <p id="cv-proficiency"><strong>Proficiency:</strong> <span id="cv-proficiency-level"></span></p>
+
+                                <p id="cv-school"><strong>School/University:</strong> <span id="cv-school-name"></span>
+                                </p>
+                                <p id="cv-field"><strong>Field of Study:</strong> <span id="cv-field-of-study"></span>
+                                </p>
+                                <p id="cv-years"><strong>Years Attended:</strong> <span id="cv-years-attended"></span>
+                                </p>
+                                <p id="cv-degree"><strong>Degree:</strong> <span id="cv-degree-name"></span></p>
+                                <p id="cv-hobby"><strong>Hobbies/Interests:</strong> <span id="cv-hobby-name"></span>
+                                </p>
                             </div>
                         </div>
                         <button id="save-button"

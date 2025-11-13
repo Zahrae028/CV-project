@@ -10,7 +10,9 @@ const email = document.getElementById('email')
 const fullName = document.getElementById('fullName')
 const phone = document.getElementById('phone')
 const address = document.getElementById('address')
-const pfp = document.getElementById('pic')
+const pfp = document.getElementById('cv-pic')
+const picInput = document.getElementById('pic-input')
+const showPic = document.getElementById('show-pic')
 
 // const position = document.getElementById('position')
 // const level = document.getElementById('level')
@@ -21,7 +23,14 @@ const data = document.getElementById('data')
 const frames = document.getElementById('frames')
 const skills = document.getElementById('skills')
 const linked = document.getElementById('linkedin')
-
+const github = document.getElementById('github')
+const language = document.getElementById('language')
+const proficiency = document.getElementById('proficiency')
+const school = document.getElementById('school')
+const field = document.getElementById('field')
+const years = document.getElementById('years')
+const degree = document.getElementById('degree')
+const hobby = document.getElementById('hobby')
 
 
 const nameError = document.getElementById('nameError')
@@ -32,12 +41,21 @@ const remove = document.getElementById('remove-button')
 const cvName = document.getElementById('cv-name');
 const cvEmail = document.getElementById('cv-email');
 const cvPhone = document.getElementById('cv-phone');
-const cvSkills = document.getElementById('cv-skils');
+const cvAddress = document.getElementById('cv-address')
+const cvSkills = document.getElementById('cv-skills');
 const cvProgLangs = document.getElementById('cv-prog-lang');
 const cvFrames = document.getElementById('cv-frames');
 const cvTools = document.getElementById('cv-tools');
 const cvData = document.getElementById('cv-database')
 const cvLinkedin = document.getElementById('cv-linkedin');
+const cvGithub = document.getElementById('cv-github')
+const cvLangs = document.getElementById('cv-language')
+const cvProfic = document.getElementById('cv-proficiency-level')
+const cvSchool = document.getElementById('cv-school-name')
+const cvField = document.getElementById('cv-field-of-study')
+const cvYears = document.getElementById('cv-years-attended')
+const cvDegree = document.getElementById('cv-degree-name')
+const cvHobby = document.getElementById('cv-hobby-name')
 
 
 
@@ -55,6 +73,9 @@ let userData = {};
 
 
 
+picInput.addEventListener('change', () => {
+  console.log("FILE CHANGED");
+});
 
 let page = 3;
 console.log(icons);
@@ -143,7 +164,14 @@ submit.addEventListener("click", (e) => {
         tools: tools.value.split(","),
         data: data.value.split(","),
         frames: frames.value.split(","),
-        skills: skills.value.split(",")
+        skills: skills.value,
+        language: language.value,
+        proficiency: proficiency.value,
+        school: school.value,
+        field: field.value,
+        years: years.value,
+        degree: degree.value,
+        hobby: hobby.value,
     }
 
 
@@ -169,15 +197,36 @@ submit.addEventListener("click", (e) => {
     cvName.textContent = userData.personalData.name
     cvEmail.textContent = userData.personalData.email
     cvPhone.textContent = userData.personalData.phone
+    cvAddress.textContent = userData.personalData.address
 
-    // cvSkills.textContent = userData.skills[0]
+    cvSkills.textContent = userData.skills
     cvProgLangs.textContent = userData.progLang
     cvFrames.textContent = userData.frames
     cvTools.textContent = userData.tools
+    cvData.textContent = userData.data
+    cvLangs.textContent = userData.language
+    cvProfic.textContent = userData.proficiency
+    cvSchool.textContent = userData.school
+    cvField.textContent = userData.field
+    cvYears.textContent = userData.years
+    cvDegree.textContent = userData.degree
+    cvHobby.textContent = userData.hobby
+
     cvLinkedin.setAttribute('href', `${linked.value}`)
+    cvGithub.setAttribute('href', `${github.value}`)
 
 
+
+ 
 })
+ picInput.addEventListener('change', () => {
+
+    if (picInput.files[0]) {
+    pfp.src = URL.createObjectURL(picInput.files[0]);
+    showPic.src = URL.createObjectURL(picInput.files[0]);  
+    }
+    
+ })
 
 
 
@@ -185,14 +234,14 @@ submit.addEventListener("click", (e) => {
 function progress() {
     bar.style.transition = "background 1s ease";
     if (page == 0) {
-        bar.style.background = 'linear-gradient(to right,#b45309,#612B0C,#612B0C , #612B0C';
+        bar.style.background = 'linear-gradient(to right,#c66507,#612B0C,#612B0C , #612B0C';
 
     } else if (page == 1) {
-        bar.style.background = 'linear-gradient(to right,#b45309,#b45309,#612B0C , #612B0C';
+        bar.style.background = 'linear-gradient(to right,#c66507,#c66507,#612B0C , #612B0C';
     } else if (page == 2) {
-        bar.style.background = 'linear-gradient(to right,#b45309,#b45309,#b45309 , #612B0C';
+        bar.style.background = 'linear-gradient(to right,#c66507,#c66507,#c66507 , #612B0C';
     } else {
-        bar.style.background = 'linear-gradient(to right,#b45309,#b45309,#b45309 , #b45309';
+        bar.style.background = 'linear-gradient(to right,#c66507,#c66507,#c66507 , #c66507';
     }
 
 }
@@ -220,4 +269,5 @@ save.addEventListener('click', (e) => {
     // New Promise-based usage:
     html2pdf().set(opt).from(cv).save();
 })
+
 

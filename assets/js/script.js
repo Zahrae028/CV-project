@@ -207,4 +207,17 @@ remove.addEventListener('click', (e) => {
     add.style.display = 'block'
     remove.style.display = 'none'
 })
+save.addEventListener('click', (e) => {
+    const cv = document.getElementById('CV')
+    var opt = {
+        margin: 0,
+        filename: 'myCV.pdf',
+        image: { type: 'jpeg' },
+        // html2canvas: { scale: 2 },
+        jsPDF: { unit: 'mm', format: 'letter', orientation: 'portrait' }
+    };
+
+    // New Promise-based usage:
+    html2pdf().set(opt).from(cv).save();
+})
 
